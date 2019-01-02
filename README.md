@@ -1,15 +1,24 @@
-# CSC309 Project Team #6
+# Past Exam Finder
 
 ![index_pefinder](https://user-images.githubusercontent.com/25379724/49624453-77cf7100-f99f-11e8-8b42-bf3a52acc30f.png)
 
 ![index](https://user-images.githubusercontent.com/25379724/47324775-2ce7dd00-d62f-11e8-8c28-a9cb296f131e.png)
 
+## Authors
+
+| Name                    | GitHub                                     | Email
+| ----------------------- | ------------------------------------------ | -------------------------
+| Chenjie (Jack) Ni       | [jellycsc](https://github.com/jellycsc)    | nichenjie2013@gmail.com
+| Cosmos                  | [yixuannliu](https://github.com/yixuannliu)| -
+| Abel                    | [17SingerAbel](https://github.com/17SingerAbel)| -
+| Claire                  | [CChongQ](https://github.com/CChongQ)      | -
+
 ## Demo Link (Both NodeJS and MongoDB are hosted on t2.micro)
-http://ec2-35-183-8-133.ca-central-1.compute.amazonaws.com
+_http://ec2-35-183-8-133.ca-central-1.compute.amazonaws.com_
 
-http://pefinder.tk
+_http://pefinder.tk_
 
-## File Structure
+## File Structure (legacy)
 ```bash
 \.
 ├── README.md
