@@ -1,0 +1,25 @@
+.center {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    overflow:auto; 
+    /* border: 3px solid green; */
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: relative;
+    background-color: #f9f9f9;
+    opacity: 0.95;
+    border-radius: 1rem;
+}
+
+#the-canvas {
+    border:1px solid black;
+    float: left;
+    margin-right: 10px;
+}
+
+.blockquote-footer .btn-danger{
+    font-size: 12px;
+    padding: 2px;
+}

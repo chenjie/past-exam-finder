@@ -1,0 +1,68 @@
+<div class="center">
+
+    <div id="pdf-buttons" class="ml-3 mt-3">
+        <button id="pdf-prev" class="btn btn-outline-secondary btn-sm">Previous</button>
+        <button id="pdf-next" class="btn btn-outline-secondary btn-sm">Next</button>
+        <button id="pdf-smaller" class="btn btn-outline-dark btn-sm">-</button>
+        <button id="pdf-bigger" class="btn btn-outline-dark btn-sm">+</button>
+        <a id="pdf-download" class="btn btn-outline-success btn-sm" target="_blank">Download</a>
+        <span class="ml-2" id='page'> Page:</span>
+    </div>
+
+    <canvas id="the-canvas" class="m-3"></canvas>
+
+    <a class="btn btn-primary mt-3" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Add Comments
+    </a>
+    
+
+    <div class="collapse m-3" id="collapseExample">
+        <div class="card card-body">
+            <form method="post" action={{url}}>
+              <div class="form-group">
+                  <textarea class="form-control" rows="5" id="new-comment" name="context"></textarea>
+              </div>
+              <button id="comment-submit-btn" class="btn btn-success" type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </div>
+
+    {{#if success_msg}}
+      <div class="alert alert-success card m-3">{{success_msg}}</div>
+    {{/if}}
+
+    {{#if error_msg}}
+      <div class="alert alert-danger card m-3">{{error_msg}}</div>
+    {{/if}}
+
+    {{#if errors}}
+      {{#each errors}}
+          <div class="alert alert-danger card m-3">{{msg}}</div>
+      {{/each}}
+    {{/if}}
+
+    <div id="comments" class="card m-3">
+        <div class="card-header">
+            Comments
+        </div>
+
+        {{#each comments}}
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>{{this.context}}</p>
+                    <footer class="blockquote-footer">
+                        <a href="/user/profile/{{this.username}}"><cite title="Source Title">{{this.username}}</cite></a>
+                        <button class="delete-comment btn btn-danger btn-sm ml-1" id="{{this._id}}">Delete</button>
+                    </footer>
+                </blockquote>
+            </div>
+        {{/each}}
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.0.943/pdf.js"></script>
+    <script src="https://fastcdn.org/FileSaver.js/1.1.20151003/FileSaver.min.js"></script>
+
+</div>
+

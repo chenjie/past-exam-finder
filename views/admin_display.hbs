@@ -1,0 +1,94 @@
+<div class="center">
+<div id="filterContainer" class="m-3" >
+    <form class="mx-3">
+        <h1> <strong> {{courseCode}} </strong></h1>
+    </form>
+
+  <div class="row">
+
+      <div id="selectYearButton" class="form-group filterSize ml-3">
+        <label for="deptSelector"></label>
+        <select class="form-control" id="deptSelectorYear">
+          {{#each yearColumn}}
+            <option>{{this}}</option>
+          {{/each}}
+        </select>
+      </div>
+
+      <div id="selectTermButton" class="form-group filterSize ml-3">
+        <form action="/user/display/{{courseCode}}" method="GET" class="selectForm">
+        <label for="deptSelector"></label>
+        <select class="form-control" id="deptSelectorTerm">
+          {{#each termColumn}}
+            <option>{{this}}</option>
+          {{/each}}
+        </select>
+        </form>
+      </div>
+ 
+      <div id="selectTypeButton" class="form-group filterSize ml-3">
+        <form action="/user/display/{{courseCode}}" method="GET" class="selectForm"></form>
+        <label for="deptSelector"></label>
+        <select class="form-control" id="deptSelectorType">
+          {{#each typeColumn}}
+            <option>{{this}}</option>
+          {{/each}}
+        </select>
+        </form>
+      </div>
+
+      <div id="selectProfessorButton" class="form-group filterSize ml-3" >
+        <form action="/user/display/{{courseCode}}" method="GET" class="selectForm"></form>
+        <label for="deptSelector"></label>
+        <select class="form-control" id="deptSelectorProf">
+          {{#each professorColumn}}
+            <option>{{this}}</option>
+          {{/each}}
+        </select>
+        </form>
+      </div>
+     
+    
+    <div class="form-group ml-3 mt-4">
+    <form action="#" method="GET" id="submitButton">
+     <button onclick="handleSubmission()" id="filterButton" type="button" class="btn btn-secondary btn">Apply Filters</button>
+    </form>
+    </div>
+
+    </div>
+
+  </div>  
+      
+
+  <div id="displayTableContainer" class="m-3">
+    <table id='display-table' class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Solutions</th>
+          <th scope="col">Username</th>
+          <th scope="col">Year</th>
+          <th scope="col">Term</th>
+          <th scope="col">Type</th>
+          <th scope="col">Professor</th>
+          <th scope="col">fileId</th>
+          <th scope="col"> </th>
+        </tr>
+      </thead>
+      <tbody class="tableBody">
+        <tr></tr>
+        {{#each solutions}}
+          <tr> 
+            <td><a class="click" href='/user/pt-comments/{{_id}}'>{{file.name}}</a></td> 
+            <td><a class="userClick" href='/user/profile/{{author}}'>{{author}}</a> </td> 
+            <td> {{year}}</td>
+            <td>{{term}}</td>
+            <td>{{type}}</td>
+            <td>{{professor}}</td>
+            <td>{{_id}}</td>            
+            <td><button type="button" class="delete-row">delete</button></td>
+          </tr>
+        {{/each}}
+
+      </tbody>
+    </table>
+  </div>

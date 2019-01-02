@@ -1,0 +1,95 @@
+<div class="center">
+<div class="container mt-5" >
+
+  {{#if success_msg}}
+      <div class="alert alert-success">{{success_msg}}</div>
+  {{/if}}
+
+  {{#if error_msg}}
+      <div class="alert alert-danger">{{error_msg}}</div>
+  {{/if}}
+
+  {{#if errors}}
+      {{#each errors}}
+          <div class="alert alert-danger">{{msg}}</div>
+      {{/each}}
+  {{/if}}
+
+
+  <form id="uploadForm" method="post" action="/user/upload" enctype="multipart/form-data" class="mr-3">
+
+  <div class="form-group row">
+    <label for="exampleSelect1" class="col-sm-3">Upload</label>
+    <div class="custom-file col-sm-9">
+      
+        <input type="file" class="custom-file-input" id="fileInput" name="file">
+        <label class="custom-file-label" for="customFile">Choose file</label>
+      
+    </div>
+  </div>
+    
+
+  <div class="form-group my-4 row">
+    <label for="deptSelector" class="col-sm-3">Department</label>
+    <select class="form-control col-sm-9" id="deptSelector" name="dept">
+      <option>Select</option>
+      <option>CSC</option>
+      <option>MAT</option>
+      <option>STA</option>
+    </select>
+  </div>
+
+  <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-3">Course Number</label>
+      <input type="text" class="form-control col-sm-9" id="courseNumInput" placeholder="Example: 309, 263, 135" name="courseNumber">
+      <span id="errorMessageInForm" class="col-sm-12 text-center mt-2"></span>
+  </div>
+
+  <div class="form-group my-4 row">
+    <label for="yearSelector" class="col-sm-3">Year</label>
+    <select class="form-control col-sm-9" id="yearSelector" name="year">
+      <option>Select</option>
+      <option>2018</option>
+      <option>2017</option>
+      <option>2016</option>
+      <option>2015</option>
+      <option>2014</option>
+      <option>2013</option>
+    </select>
+  </div>
+
+  <div class="form-group my-4 row">
+    <label for="termSelector" class="col-sm-3">Term</label>
+    <select class="form-control col-sm-9" id="termSelector" name="term">
+      <option>Select</option>
+      <option>Fall</option>
+      <option>Winter</option>
+    </select>
+  </div>
+
+  <div class="form-group my-4 row">
+    <label for="termSelector" class="col-sm-3">Type</label>
+    <select class="form-control col-sm-9" id="termSelector" name="type">
+      <option>Select</option>
+      <option>Midterm</option>
+      <option>Final</option>
+    </select>
+  </div>
+
+  <div class="form-group row">
+      <label for="formGroupExampleInput" class="col-sm-3">Professor</label>
+      <input type="text" class="form-control col-sm-9" id="professorInput" placeholder="Example: Ken Jackson" name="professor">
+      <span id="errorMessageInForm" class="col-sm-12 text-center mt-2"></span>
+  </div>
+
+  
+
+  <div class="text-center col-12">
+    <button type="submit" class="btn btn-primary" id="fileSubmit">Submit</button>
+  </div>
+
+  </form>
+
+  
+</div>
+</div>

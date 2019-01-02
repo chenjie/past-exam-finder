@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="login-register-form">
+        <div class="main-div">
+            <div class="panel">
+                <h2>Login</h2>
+                <p>Please enter your email and password</p>
+            </div>
+            {{#if success_msg}}
+                <div class="alert alert-success">{{success_msg}}</div>
+            {{/if}}
+
+            {{#if error_msg}}
+                <div class="alert alert-danger">{{error_msg}}</div>
+            {{/if}}
+
+            {{#if error}}
+                <div class="alert alert-danger">{{error}}</div>
+            {{/if}}
+            <form id="Login" method="post" action="/login">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="inputUsername" placeholder="Email Address" name="username">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="password">
+                </div>
+                <div>
+                    <small> New user? <a href="/register"> Create a new account</a></small>
+                </div>
+                <button type="submit" class="btn btn-primary ">Login</button>
+
+            </form>
+        </div>
+    </div>
+</div>
