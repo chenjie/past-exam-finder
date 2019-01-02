@@ -14,9 +14,9 @@
 | Claire                  | [CChongQ](https://github.com/CChongQ)      | -
 
 ## Demo Link (Both NodeJS and MongoDB are hosted on t2.micro)
-_http://ec2-35-183-8-133.ca-central-1.compute.amazonaws.com_
+~~http://ec2-35-183-8-133.ca-central-1.compute.amazonaws.com~~
 
-_http://pefinder.tk_
+~~http://pefinder.tk~~
 
 ## File Structure (legacy)
 ```bash
