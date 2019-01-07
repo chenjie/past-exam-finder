@@ -63,3 +63,6 @@
     ├── login.hbs
     └── register.hbs
 ```
+
+## License
+[MIT](LICENSE)
