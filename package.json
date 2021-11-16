@@ -18,7 +18,7 @@
   "homepage": "https://github.com/csc309-fall-2018/team06#readme",
   "dependencies": {
     "@types/express": "^4.16.0",
-    "aws-sdk": "^2.366.0",
+    "aws-sdk": "^2.814.0",
     "body-parser": "^1.18.3",
     "cheerio": "^1.0.0-rc.2",
     "connect-flash": "^0.1.1",
